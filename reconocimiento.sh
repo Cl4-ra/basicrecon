@@ -37,7 +37,7 @@ then
 	echo -e "\e[1;33mIndica el puerto donde tiene ese servicio montado\e[0m"
 	read pweb
 	echo -e "\e[5;32mPaciencia que tardo un ratin...\e[0m"
-	nikto -h $ip -p $pweb -Version -o nikto$ip.txt ##con esto lanzamos nikto
+	nikto -host $ip -p $pweb -Version -o nikto$ip.txt ##con esto lanzamos nikto
 	echo -e "\e[32mse guardo el contenido en un archivo txt\e[0m"
 elif [ $nikto = NO ];
 then
