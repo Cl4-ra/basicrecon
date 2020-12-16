@@ -28,7 +28,7 @@ echo -e "\e[32mSe recomienda tambien pasar un escaneo mas completo, como openvas
 
 echo "      "
 
-##ESCANEO CON NIKTO SI HAY SERVICIO WEB
+##ESCANEO CON NIKTO SI HAY SERVICIO WEB, esto esta todavia sin conseguir del todo
 echo -e "\e[1;33m**** Si quieres lanzar nikto a servicio web que tenga la maquina introduce SI, sino NO ****\e[0m"
 read nikto
 
@@ -37,7 +37,7 @@ then
 	echo -e "\e[1;33mIndica el puerto donde tiene ese servicio montado\e[0m"
 	read pweb
 	echo -e "\e[5;32mPaciencia que tardo un ratin...\e[0m"
-	nikto -host $ip -p $pweb -Version -o nikto$ip.txt ##con esto lanzamos nikto
+	nikto -host $ip -p $pweb >> nikto-$ip.txt ##con esto lanzamos nikto
 	echo -e "\e[32mse guardo el contenido en un archivo txt\e[0m"
 elif [ $nikto = NO ];
 then
